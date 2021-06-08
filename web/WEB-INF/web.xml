@@ -3,4 +3,57 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <display-name>jd2-les02-ex01</display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>MyController</servlet-name>
+        <servlet-class>com.hospital_manager.controllers.Controller</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyController</servlet-name>
+        <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadController</servlet-name>
+        <servlet-class>com.hospital_manager.controllers.UploadFileController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadController</servlet-name>
+        <url-pattern>/UploadFileController</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <exception-type>java.lang.RuntimeException</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.html</location>
+    </error-page>
+
+    <listener>
+        <listener-class>com.hospital_manager.controllers.listener.AppContextListener</listener-class>
+    </listener>
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>com.hospital_manager.controllers.filter.CharsetFilter</filter-class>
+        <init-param>
+            <param-name>characterEncoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/Controller</url-pattern>
+    </filter-mapping>
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
 </web-app>
