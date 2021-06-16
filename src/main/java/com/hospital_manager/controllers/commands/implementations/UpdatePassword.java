@@ -52,10 +52,10 @@ public class UpdatePassword  implements Command {
         long accountId = 0;
         try {
             if (session.getAttribute(ATTRIBUTE_ROLE).equals(ROLE_PATIENT)) {
-                Patient patient = provider.getPatientService().getPatientById((Long) session.getAttribute(ATTRIBUTE_VISITOR_ID));
+                Patient patient = provider.getPatientService().getPatientById((Long) session.getAttribute(ATTRIBUTE_USER_ID));
                 accountId = patient.getAccountID();
             } else if (session.getAttribute(ATTRIBUTE_ROLE).equals(ROLE_DOCTOR)||session.getAttribute(ATTRIBUTE_ROLE).equals(ROLE_NURSE)) {
-                Staff staff = provider.getStaffService().getStaffById((Long) session.getAttribute(ATTRIBUTE_VISITOR_ID));
+                Staff staff = provider.getStaffService().getStaffById((Long) session.getAttribute(ATTRIBUTE_USER_ID));
                 accountId = staff.getAccountID();
             }
 

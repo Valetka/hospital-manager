@@ -23,14 +23,14 @@ public class SubmitApplication implements Command {
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession(true);
         Boolean isAuth = (Boolean) session.getAttribute(ATTRIBUTE_AUTH);
-        String role  = (String) session.getAttribute(ATTRIBUTE_ROLE);
+        String role = (String) session.getAttribute(ATTRIBUTE_ROLE);
         if (isAuth == null || !isAuth|| !role.equals(ROLE_PATIENT)  ) {
             session.setAttribute(ATTRIBUTE_URL,GO_TO_INDEX_PAGE);
             response.sendRedirect(GO_TO_INDEX_PAGE);
             return;
         }
 
-        Long patientId = (Long)session.getAttribute(ATTRIBUTE_VISITOR_ID);
+        Long patientId = (Long)session.getAttribute(ATTRIBUTE_USER_ID);
         try {
             PatientService patientService = ServiceProvider.getInstance().getPatientService();
             Patient patient = patientService.getPatientById(patientId);

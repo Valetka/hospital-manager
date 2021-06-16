@@ -30,9 +30,7 @@ public class PatientDAOImplementation implements PatientDAO {
     private static final String SELECT_PATIENT_BY_ID = "SELECT * FROM patients WHERE id =?";
     private static final String SELECT_PATIENT_BY_ACCOUNT = "SELECT * FROM patients WHERE account_id =?";
 
-    /**
-     * Instance of {@link ConnectionPool}
-     */
+
     private final ConnectionPool connectionPool = PoolProvider.getConnectionPool();
 
     @Override

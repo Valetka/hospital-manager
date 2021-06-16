@@ -82,7 +82,7 @@ public class AddAppointment implements Command {
         appointment.setInfoId(appointmentInfo.getId());
         appointment.setExecuteStaffId(execStaffId);
         appointment.setPatientId(patientId);
-        appointment.setAppointingDoctorId((Long)session.getAttribute(ATTRIBUTE_VISITOR_ID));
+        appointment.setAppointingDoctorId((Long)session.getAttribute(ATTRIBUTE_USER_ID));
         appointment.setStatus(AppointmentStatus.APPOINTED);
         if(dateOfCompletion!=null){
             appointment.setDateOfCompletion(dateOfCompletion);

@@ -42,7 +42,7 @@ public class GoToDoctorsPatientsPage implements Command {
         PatientService patientService = serviceProvider.getPatientService();
         List<Patient> patients;
         try {
-            patients = patientService.getAllPatientsByStaff((Long) session.getAttribute(ATTRIBUTE_VISITOR_ID));
+            patients = patientService.getAllPatientsByStaff((Long) session.getAttribute(ATTRIBUTE_USER_ID));
             session.setAttribute(ATTRIBUTE_URL,GO_TO_DOCTORS_PATIENTS);
             request.setAttribute(ATTRIBUTE_PATIENT, patients);
             request.getRequestDispatcher(PATH_TO_PATIENTS).forward(request,response);

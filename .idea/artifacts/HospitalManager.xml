@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HospitalManager">
+    <output-path>$PROJECT_DIR$/out/artifacts/HospitalManager</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="HospitalManager/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HospitalManager" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

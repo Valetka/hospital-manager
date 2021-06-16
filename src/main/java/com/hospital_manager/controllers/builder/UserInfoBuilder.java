@@ -29,7 +29,7 @@ public class UserInfoBuilder {
         userInfo.setLastname(request.getParameter(LASTNAME));
     }
 
-    public UserInfoBuilder setRoleId( int roleId){
+    public UserInfoBuilder setRoleId(int roleId){
         userInfo.setRoleId(roleId);
         return this;
     }

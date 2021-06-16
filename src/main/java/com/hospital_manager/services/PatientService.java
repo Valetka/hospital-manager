@@ -7,7 +7,7 @@ import javax.servlet.http.Part;
 import java.util.List;
 
 public interface PatientService {
-    Patient getPatientById(Long id) throws ServiceException;
+    Patient getPatientById(long id) throws ServiceException;
 
     
     Patient getPatientByAccount(long id) throws ServiceException;

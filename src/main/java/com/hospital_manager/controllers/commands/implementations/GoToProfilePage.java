@@ -41,7 +41,7 @@ public class GoToProfilePage implements Command {
             return;
         }
 
-        Long id = (Long) session.getAttribute(ATTRIBUTE_VISITOR_ID);
+        Long id = (Long) session.getAttribute(ATTRIBUTE_USER_ID);
         String role = (String)session.getAttribute(ATTRIBUTE_ROLE);
 
         ServiceProvider serviceProvider = ServiceProvider.getInstance();

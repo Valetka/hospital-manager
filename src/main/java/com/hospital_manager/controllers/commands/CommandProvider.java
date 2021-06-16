@@ -34,6 +34,7 @@ public final class CommandProvider {
         commands.put(CommandNames.GO_TO_STAFF_APPOINTMENT_LIST_PAGE, new GoToStaffAppointmentListPage());
 
         commands.put(CommandNames.GO_TO_ADD_STAFF_PAGE, new GoToAddStaffPage());
+        commands.put(CommandNames.GO_TO_ADD_PATIENT_PAGE, new GoToAddPatientPage());
         commands.put(CommandNames.SUBMIT_APPLICATION, new SubmitApplication());
         commands.put(CommandNames.ADD_ADDITIONAL_INFO, new AddAdditionalInfo());
         commands.put(CommandNames.GO_TO_MEDICAL_HISTORY_PAGE,new GoToMedicalHistoryPage());

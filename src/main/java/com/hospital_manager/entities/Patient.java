@@ -9,16 +9,16 @@ public class Patient implements User{
     private String lastname;
     private int age;
     private Department department;
-    private Long attendingDoctorID;
-    private Long statusID;
+    private long attendingDoctorID;
+    private long statusID;
     private long accountID;
     private String patientPic;
 
     public Patient() {
     }
 
-    public Patient(long id, String firstname, String lastname, int age, Department department, Long attendingDoctorID,
-                   Long statusID, long accountID, String patientPic) {
+    public Patient(long id, String firstname, String lastname, int age, Department department, long attendingDoctorID,
+                   long statusID, long accountID, String patientPic) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -62,11 +62,11 @@ public class Patient implements User{
         this.age = age;
     }
 
-    public Long getAttendingDoctorID() {
+    public long getAttendingDoctorID() {
         return attendingDoctorID;
     }
 
-    public void setAttendingDoctorID(Long attendingDoctorID) {
+    public void setAttendingDoctorID(long attendingDoctorID) {
         this.attendingDoctorID = attendingDoctorID;
     }
 

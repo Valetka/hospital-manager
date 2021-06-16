@@ -40,7 +40,7 @@ public class GoToStaffAppointmentListPage implements Command {
             return;
         }
 
-        long visitorId = (long) session.getAttribute(ATTRIBUTE_VISITOR_ID);
+        long visitorId = (long) session.getAttribute(ATTRIBUTE_USER_ID);
         ServiceProvider serviceProvider = ServiceProvider.getInstance();
         AppointmentService appointmentService = serviceProvider.getAppointmentService();
         List<AppointmentDTO> allAppointments = new ArrayList<>();

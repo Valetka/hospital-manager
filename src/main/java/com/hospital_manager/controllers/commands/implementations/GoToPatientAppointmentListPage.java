@@ -36,7 +36,7 @@ public class GoToPatientAppointmentListPage implements Command {
             response.sendRedirect(GO_TO_INDEX_PAGE);
             return;
         }
-        long visitorId = (long) session.getAttribute(ATTRIBUTE_VISITOR_ID);
+        long visitorId = (long) session.getAttribute(ATTRIBUTE_USER_ID);
         ServiceProvider serviceProvider = ServiceProvider.getInstance();
         AppointmentService appointmentService = serviceProvider.getAppointmentService();
         List<AppointmentDTO> allAppointments = new ArrayList<>();

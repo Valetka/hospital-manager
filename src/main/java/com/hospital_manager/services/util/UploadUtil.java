@@ -23,7 +23,7 @@ public class UploadUtil {
             File uploads = new File(PATH_TO_STORAGE);
             File file = new File(uploads, fileName);
             if(!file.exists()) {
-                try (InputStream fileContent = part.getInputStream();) {
+                try (InputStream fileContent = part.getInputStream()) {
                     Files.copy(fileContent, file.toPath());
                 } catch (IOException e) {
                     throw new UtilException(e);

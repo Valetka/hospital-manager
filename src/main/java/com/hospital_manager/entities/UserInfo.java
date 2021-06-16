@@ -11,17 +11,18 @@ public class UserInfo {
     private int age;
     private long roleId;
 
-
-    public UserInfo() {
-    }
-
-    public UserInfo(String login, String password, long roleId) {
+    public UserInfo(String firstname, String lastname, String login, String password, int age, long roleId) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.login = login;
         this.password = password;
+        this.age = age;
         this.roleId = roleId;
     }
+
+    public UserInfo() {
+    }
+
 
     public String getFirstname() {
         return firstname;

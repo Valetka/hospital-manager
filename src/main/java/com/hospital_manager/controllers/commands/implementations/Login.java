@@ -20,7 +20,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
 
 public class Login implements Command {
 
-    private static final String GO_TO_ADD_ADDITIONAL_INFO_PAGE = "Controller?command=gotoaddadditionalinfopage";
+    private static final String GO_TO_ADD_ADDITIONAL_INFO_PAGE = "Controller?command=go_to_add_additional_info_page";
     private static final String WRONG_LOGIN_OR_PASSWORD = "local.message.login";
     private static final String ERROR_DATA = "local.error.data_format";
 
@@ -47,7 +47,7 @@ public class Login implements Command {
             session.setAttribute(ATTRIBUTE_AUTH, true);
             if(account.getRoleId()==2) {
                 Staff staff = ServiceProvider.getInstance().getStaffService().getStaffByAccount(account.getId());
-                session.setAttribute(ATTRIBUTE_VISITOR_ID,(staff.getId()));
+                session.setAttribute(ATTRIBUTE_USER_ID,(staff.getId()));
                 if(staff.getStaffTypeID()==1) {
                     session.setAttribute(ATTRIBUTE_ROLE,ROLE_DOCTOR);
                 }
@@ -58,7 +58,7 @@ public class Login implements Command {
             }
             else if (account.getRoleId()==3) {
                 Patient patient = ServiceProvider.getInstance().getPatientService().getPatientByAccount(account.getId());
-                session.setAttribute(ATTRIBUTE_VISITOR_ID,(patient.getId()));
+                session.setAttribute(ATTRIBUTE_USER_ID,(patient.getId()));
                 session.setAttribute(ATTRIBUTE_ROLE,ROLE_PATIENT);
                 session.setAttribute(ROLE_PATIENT,patient);
                 if(patient.getAge()==0) {

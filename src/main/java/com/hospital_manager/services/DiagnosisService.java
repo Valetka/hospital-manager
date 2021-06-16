@@ -10,7 +10,6 @@ public interface DiagnosisService {
 
     void addDiagnosis(Diagnosis diagnosis) throws ServiceException;
 
-
     List<DiagnosisDTO> getDiagnosisByPatientId(long patientID) throws ServiceException;
 
     void update(Diagnosis diagnosis) throws ServiceException;

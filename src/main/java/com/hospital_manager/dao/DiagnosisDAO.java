@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface DiagnosisDAO {
 
-    void addDiagnosis(Diagnosis epicrisis) throws DAOException;
+    void addDiagnosis(Diagnosis diagnosis) throws DAOException;
 
 
     List<Diagnosis> getDiagnosisByPatientId(long patientId)throws DAOException;

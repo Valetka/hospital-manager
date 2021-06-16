@@ -63,7 +63,7 @@ public class PatientServiceImplementation implements PatientService {
     }
 
     @Override
-    public Patient getPatientById(Long id) throws ServiceException {
+    public Patient getPatientById(long id) throws ServiceException {
         if (!Validator.isIdValid(id)) {
             logger.log(Level.WARN,id+INVALID);
             throw new ServiceException(id+INVALID);

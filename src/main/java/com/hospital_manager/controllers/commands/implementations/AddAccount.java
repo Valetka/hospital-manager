@@ -39,7 +39,8 @@ public class AddAccount implements Command {
         UserInfoBuilder userInfoBuilder = new UserInfoBuilder();
         userInfoBuilder.buildUserInfo(request);
 
-        if (isAuth != null) {
+        if(isAuth != null )
+        {
             returnErrorPage = GO_TO_ADD_STAFF_PAGE;
             staffType = Long.parseLong(request.getParameter(STAFF_TYPE));
             userInfoBuilder.setRoleId(2);
@@ -57,30 +58,31 @@ public class AddAccount implements Command {
         PatientService patientService = provider.getPatientService();
         try {
             accountService.registration(userInfo);
-            Account account = accountService.authorization(userInfo.getLogin(), userInfo.getPassword());
-            if (account.getRoleId() == 3) {
-                Patient patient = ServiceProvider.getInstance().getPatientService().getPatientByAccount(account.getId());
-                patientService.savePictureToPatient(patient, null);
+            Account account = accountService.authorization(userInfo.getLogin(),userInfo.getPassword());
+            if(account.getRoleId()==3)
+            {
+                Patient patient = ServiceProvider.getInstance().getPatientService().getPatientByAccount(account.getId());;
+                patientService.savePictureToPatient(patient,null);
                 MedicalHistory medicalHistory = new MedicalHistory();
                 medicalHistory.setPatientId(patient.getId());
                 medicalHistoryService.add(medicalHistory);
-            } else if (account.getRoleId() == 2) {
+            }else if(account.getRoleId()==2){
                 Staff staff = ServiceProvider.getInstance().getStaffService().getStaffByAccount(account.getId());
                 staff.setStaffTypeID(staffType);
                 staff.setFirstname(userInfo.getFirstname());
                 staff.setLastname(userInfo.getLastname());
                 staffService.update(staff);
-                staffService.savePictureToStaff(staff, null);
+                staffService.savePictureToStaff(staff,null);
             }
-            session.setAttribute(ATTRIBUTE_INFO_MESSAGE, Arrays.asList(REGISTRATION_OK));
+            session.setAttribute(ATTRIBUTE_INFO_MESSAGE,Arrays.asList(REGISTRATION_OK));
             response.sendRedirect(GO_TO_MAIN_PAGE);
-        } catch (LoginIsBusyException e) {
+        }catch (LoginIsBusyException e) {
             session.setAttribute(ATTRIBUTE_ERROR_MESSAGE, Arrays.asList(ERROR_BUSY));
             response.sendRedirect(returnErrorPage);
-        } catch (DataFormatServiceException e) {
-            session.setAttribute(ATTRIBUTE_ERROR_MESSAGE, Arrays.asList(ERROR_DATA));
+        }catch (DataFormatServiceException e) {
+            session.setAttribute(ATTRIBUTE_ERROR_MESSAGE,Arrays.asList(ERROR_DATA));
             response.sendRedirect(returnErrorPage);
-        } catch (ServiceException e) {
+        }catch (ServiceException e) {
             response.sendRedirect(GO_TO_ERROR_PAGE);
         }
     }

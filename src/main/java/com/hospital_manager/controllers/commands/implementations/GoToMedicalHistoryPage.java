@@ -42,7 +42,7 @@ public class GoToMedicalHistoryPage implements Command {
         {
             patientId = Long.valueOf(request.getParameter("patientId"));
         }else{
-            patientId = (Long) session.getAttribute(ATTRIBUTE_VISITOR_ID);
+            patientId = (Long) session.getAttribute(ATTRIBUTE_USER_ID);
         }
         ServiceProvider provider = ServiceProvider.getInstance();
         DiagnosisService diagnosisService = provider.getDiagnosisService();

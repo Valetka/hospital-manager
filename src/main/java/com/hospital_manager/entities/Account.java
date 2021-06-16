@@ -8,7 +8,7 @@ public class Account {
     private long id;
     private String login;
     private String password;
-    private Long roleId;
+    private long roleId;
 
     public Account() {
     }
@@ -44,11 +44,11 @@ public class Account {
         this.password = password;
     }
 
-    public Long getRoleId() {
+    public long getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(Long roleId) {
+    public void setRoleId(long roleId) {
         this.roleId = roleId;
     }
 

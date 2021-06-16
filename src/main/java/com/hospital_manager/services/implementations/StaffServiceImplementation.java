@@ -24,7 +24,7 @@ public class StaffServiceImplementation implements StaffService {
     private static final DAOProvider provider  = DAOProvider.getInstance();
 
     @Override
-    public Staff getStaffById(Long id) throws ServiceException {
+    public Staff getStaffById(long id) throws ServiceException {
         if (!Validator.isIdValid(id)) {
             logger.log(Level.WARN,id+INVALID);
             throw new ServiceException(id+INVALID);
@@ -54,7 +54,7 @@ public class StaffServiceImplementation implements StaffService {
 
 
     @Override
-    public List<Staff> getAllByType(Long typeId) throws ServiceException {
+    public List<Staff> getAllByType(long typeId) throws ServiceException {
         StaffDAO staffDAO = provider.getStaffDAO();
         List<Staff> allStaff;
         try {

@@ -47,7 +47,7 @@ public class UploadFileController extends HttpServlet {
         if(role.equals(ROLE_PATIENT)) {
             PatientService patientService = ServiceProvider.getInstance().getPatientService();
             try {
-                Patient patient = patientService.getPatientById((long) session.getAttribute(ATTRIBUTE_VISITOR_ID));
+                Patient patient = patientService.getPatientById((long) session.getAttribute(ATTRIBUTE_USER_ID));
                 patientService.savePictureToPatient(patient,filePart);
 
             } catch (ServiceException e) {
@@ -59,7 +59,7 @@ public class UploadFileController extends HttpServlet {
         }else {
             StaffService staffService = ServiceProvider.getInstance().getStaffService();
             try {
-                Staff staff = staffService.getStaffById((long) session.getAttribute(ATTRIBUTE_VISITOR_ID));
+                Staff staff = staffService.getStaffById((long) session.getAttribute(ATTRIBUTE_USER_ID));
                 staffService.savePictureToStaff(staff,filePart);
 
             } catch (ServiceException e) {

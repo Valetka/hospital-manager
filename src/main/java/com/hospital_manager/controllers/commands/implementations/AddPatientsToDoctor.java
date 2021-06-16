@@ -43,7 +43,7 @@ public class AddPatientsToDoctor implements Command {
 
         long selectedPatientsId = Long.parseLong(request.getParameter("free_patient_id"));
         String preliminaryDiagnosis = request.getParameter("preliminaryDiagnosis");
-        Long doctorId = (Long)session.getAttribute(ATTRIBUTE_VISITOR_ID);
+        Long doctorId = (Long)session.getAttribute(ATTRIBUTE_USER_ID);
         Date receiptDate = Date.valueOf(request.getParameter("receiptDate"));
 
         ServiceProvider serviceProvider = ServiceProvider.getInstance();

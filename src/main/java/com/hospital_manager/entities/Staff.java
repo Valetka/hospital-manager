@@ -2,11 +2,11 @@ package com.hospital_manager.entities;
 
 import java.util.Objects;
 
-public class Staff implements User{
+public class Staff implements User {
 
     private long id;
     private String firstname;
-    private String Lastname;
+    private String lastname;
     private String picture;
     private long staffTypeID;
     private Department department;
@@ -18,9 +18,9 @@ public class Staff implements User{
     public Staff(long id, String firstname, String lastname, String picture, long staffTypeID, Department department, long accountID) {
         this.id = id;
         this.firstname = firstname;
-        Lastname = lastname;
+        this.lastname = lastname;
         this.picture = picture;
-        staffTypeID = staffTypeID;
+        this.staffTypeID = staffTypeID;
         this.department = department;
         this.accountID = accountID;
     }
@@ -42,11 +42,11 @@ public class Staff implements User{
     }
 
     public String getLastname() {
-        return Lastname;
+        return lastname;
     }
 
     public void setLastname(String lastname) {
-        Lastname = lastname;
+        this.lastname = lastname;
     }
 
     public String getPicture() {
@@ -62,7 +62,7 @@ public class Staff implements User{
     }
 
     public void setStaffTypeID(long staffTypeID) {
-        staffTypeID = staffTypeID;
+        this.staffTypeID = staffTypeID;
     }
 
     public Department getDepartment() {
@@ -86,12 +86,12 @@ public class Staff implements User{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Staff staff = (Staff) o;
-        return id == staff.id && staffTypeID == staff.staffTypeID && accountID == staff.accountID && Objects.equals(firstname, staff.firstname) && Objects.equals(Lastname, staff.Lastname) && Objects.equals(picture, staff.picture) && department == staff.department;
+        return id == staff.id && staffTypeID == staff.staffTypeID && accountID == staff.accountID && Objects.equals(firstname, staff.firstname) && Objects.equals(lastname, staff.lastname) && Objects.equals(picture, staff.picture) && department == staff.department;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstname, Lastname, picture, staffTypeID, department, accountID);
+        return Objects.hash(id, firstname, lastname, picture, staffTypeID, department, accountID);
     }
 
     @Override
@@ -99,7 +99,7 @@ public class Staff implements User{
         return "Staff{" +
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
-                ", Lastname='" + Lastname + '\'' +
+                ", Lastname='" + lastname + '\'' +
                 ", picture='" + picture + '\'' +
                 ", StaffTypeID=" + staffTypeID +
                 ", department=" + department +
