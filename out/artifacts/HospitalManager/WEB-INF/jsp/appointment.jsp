@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;
+<%@ page contentType="text/html;
     charset=utf-8"
          pageEncoding="utf-8"%>
 
@@ -43,8 +43,8 @@
                     <div class="col-md-6">
                         <label for="inputPatient" class="form-label">${patient}</label>
                         <select class="form-select" name = "select_patient_id" id="inputPatient" >
-                            <c:forEach var="pati" items="${requestScope.allPatients}">
-                                <option value="${pati.id}">${pati.firstname} ${pati.lastname} ${pati.age}</option>
+                            <c:forEach var="pat" items="${requestScope.allPatients}">
+                                <option value="${pat.id}">${pat.firstname} ${pat.lastname} ${pat.age}</option>
                             </c:forEach>
                         </select>
                     </div>

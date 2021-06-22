@@ -1,0 +1,13 @@
+2021-06-22 19:00:17 WARN  AccountDAOImplementation - wrong old password
+2021-06-22 19:00:17 ERROR AccountDAOImplementation - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "accounts_login_uindex"
+  Подробности: Key (login)=(petr) already exists.
+2021-06-22 19:00:17 ERROR AccountDAOImplementation - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "accounts_login_uindex"
+  Подробности: Key (login)=(ivan) already exists.
+2021-06-22 19:00:17 ERROR AccountDAOImplementation - org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "accounts_login_uindex"
+  Подробности: Key (login)=(violetta) already exists.
+2021-06-22 19:03:12 ERROR AppointmentDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patient_appointments" violates foreign key constraint "patient_appointments_staff_id_fk"
+  Подробности: Key (id_staff_appoint)=(1) is not present in table "staff".
+2021-06-22 19:03:58 ERROR AppointmentDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patient_appointments" violates foreign key constraint "patient_appointments_staff_id_fk"
+  Подробности: Key (id_staff_appoint)=(1) is not present in table "staff".
+2021-06-22 19:15:02 ERROR StaffDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "staff" violates foreign key constraint "staff_staff_types_id_fk"
+  Подробности: Key (type_id)=(0) is not present in table "staff_types".

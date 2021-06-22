@@ -20,7 +20,7 @@ public class GoToFreePatientsPage implements Command {
 
 
     private static final String PATH_TO_FREE_PATIENTS = "/WEB-INF/jsp/free_patients.jsp";
-    private static final String GO_TO_FREE_PATIENTS = "Controller?command=gotofreepatientspage";
+    private static final String GO_TO_FREE_PATIENTS = "Controller?command=go_to_free_patients_page";
     private static final String ATTRIBUTE_PATIENT = "patientList";
 
     @Override

@@ -20,7 +20,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
 public class GoToProfilePage implements Command {
 
 
-    private static final String GO_TO_PROFILE_PAGE = "Controller?command=gotoprofilepage";
+    private static final String GO_TO_PROFILE_PAGE = "Controller?command=go_to_profile_page";
     private static final String PATH_TO_PROFILE = "/WEB-INF/jsp/profile.jsp";
 
 

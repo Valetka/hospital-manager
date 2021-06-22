@@ -20,7 +20,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
 public class GoToPatientAppointmentListPage implements Command {
 
 
-    private static final String GO_TO_APPOINTMENT_PATIENT_LIST_PAGE = "Controller?command=gotopatientappointmentlistpage";
+    private static final String GO_TO_APPOINTMENT_PATIENT_LIST_PAGE = "Controller?command=go_to_patient_appointment_list_page";
     public static final String PATH_TO_APPOINTMENT_LIST_PAGE ="/WEB-INF/jsp/appointment_list_for_patient.jsp";
     private static final String ATTRIBUTE_APPOINTMENT_LIST = "appointment_list";
     @Override
@@ -51,7 +51,7 @@ public class GoToPatientAppointmentListPage implements Command {
             }
         }
         session.setAttribute(ATTRIBUTE_URL, GO_TO_APPOINTMENT_PATIENT_LIST_PAGE);
-        request.setAttribute(ATTRIBUTE_APPOINTMENT_LIST,allAppointments );
+        request.setAttribute(ATTRIBUTE_APPOINTMENT_LIST,allAppointments);
         request.getRequestDispatcher(PATH_TO_APPOINTMENT_LIST_PAGE).forward(request, response);
     }
 }

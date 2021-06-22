@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.hospital_manager.controllers.commands.CommandParameter.*;
@@ -20,7 +19,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
 public class GoToMedicalHistoryPage implements Command {
 
     private static final String PATH_TO_HISTORY = "/WEB-INF/jsp/medical_history.jsp";
-    private static final String GO_TO_HISTORY = "Controller?command=gotomedicalhistorypage";
+    private static final String GO_TO_HISTORY = "Controller?command=go_to_medical_history_page";
     private static final String ATTRIBUTE_MEDICAL_HISTORY = "medicalHistory";
 
     @Override
@@ -46,7 +45,7 @@ public class GoToMedicalHistoryPage implements Command {
         }
         ServiceProvider provider = ServiceProvider.getInstance();
         DiagnosisService diagnosisService = provider.getDiagnosisService();
-        List<DiagnosisDTO> diagnosisList = new ArrayList<>();
+        List<DiagnosisDTO> diagnosisList;
         try {
             diagnosisList = diagnosisService.getDiagnosisByPatientId(patientId);
         } catch (ServiceException e) {

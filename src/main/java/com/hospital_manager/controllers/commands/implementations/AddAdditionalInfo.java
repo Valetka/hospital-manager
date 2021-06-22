@@ -42,17 +42,17 @@ public class AddAdditionalInfo implements Command {
         }
 
 
-        String age = request.getParameter(AGE);
         String firstname = request.getParameter(FIRSTNAME);
         String lastname = request.getParameter(LASTNAME);
+        String age = request.getParameter(AGE);
         ServiceProvider provider = ServiceProvider.getInstance();
         PatientService patientService = provider.getPatientService();
 
         try {
             Patient patient = patientService.getPatientById((Long) session.getAttribute(ATTRIBUTE_USER_ID));
-            patient.setAge(Integer.parseInt(age));
             patient.setFirstname(firstname);
             patient.setLastname(lastname);
+            patient.setAge(Integer.parseInt(age));
             patientService.update(patient);
             session.setAttribute(ATTRIBUTE_URL,GO_TO_MAIN_PAGE);
             response.sendRedirect(GO_TO_MAIN_PAGE);

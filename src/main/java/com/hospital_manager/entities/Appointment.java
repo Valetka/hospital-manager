@@ -16,7 +16,7 @@ public class Appointment {
 
 
     public Appointment(long id, Date dateOfAppointment, Date dateOfCompletion, long patientId, long appointingDoctorId,
-                       long executeStaffId, long infoId, long epicrisisID, AppointmentStatus status) {
+                       long executeStaffId, long infoId, long diagnosisID, AppointmentStatus status) {
         this.id = id;
         this.dateOfAppointment = dateOfAppointment;
         this.dateOfCompletion = dateOfCompletion;
@@ -24,7 +24,7 @@ public class Appointment {
         this.appointingDoctorId = appointingDoctorId;
         this.executeStaffId = executeStaffId;
         this.infoId = infoId;
-        this.diagnosisID = epicrisisID;
+        this.diagnosisID = diagnosisID;
         this.status = status;
     }
 
@@ -130,7 +130,7 @@ public class Appointment {
                 ", appointingDoctorId=" + appointingDoctorId +
                 ", executeStaffId=" + executeStaffId +
                 ", infoId=" + infoId +
-                ", epicrisisID=" + diagnosisID +
+                ", diagnosisID=" + diagnosisID +
                 ", status=" + status +
                 '}';
     }

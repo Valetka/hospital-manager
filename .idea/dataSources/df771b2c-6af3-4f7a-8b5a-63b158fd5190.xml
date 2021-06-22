@@ -1408,28 +1408,28 @@ true posix/WET
 false posix/Zulu
 true posixrules
 </TimeZones>
-      <StartupTime>1623834168</StartupTime>
+      <StartupTime>1624264305</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13395</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>717</IntrospectionStateNumber>
+      <IntrospectionStateNumber>923</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16384|16386|1
 sequence|table|16395|16397|1
-sequence|table|16438|16440|1
 sequence|table|16449|16451|1
+sequence|table|41428|41430|1
+sequence|table|16438|16440|1
 sequence|table|16427|16429|1
 sequence|table|16406|16408|1
 sequence|table|16526|16528|1
 sequence|table|16540|16542|1
 sequence|table|16558|16560|1
 sequence|table|16574|16576|1
-sequence|table|16595|16597|1
-sequence|table|16416|16418|1
-sequence|table|16460|16462|1
 sequence|table|16587|16589|1
+sequence|table|16460|16462|1
+sequence|table|16595|16597|1
 </Relations>
     </database>
     <role id="3" parent="1" name="pg_execute_server_program">
@@ -1500,7 +1500,7 @@ UC/10
 </Acl>
       <StateNumber>287</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>718</IntrospectionStateNumber>
+      <IntrospectionStateNumber>924</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="17" parent="2" name="plpgsql">
@@ -1603,7 +1603,7 @@ UC/10
     <sequence id="29" parent="16" name="accounts_id_seq">
       <ObjectId>16384</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>699</StateNumber>
+      <StateNumber>907</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="30" parent="16" name="appointment_status_id_seq">
@@ -1621,7 +1621,7 @@ UC/10
     <sequence id="32" parent="16" name="appointments_id_seq">
       <ObjectId>16449</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>511</StateNumber>
+      <StateNumber>908</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="33" parent="16" name="departments_id_seq">
@@ -1631,21 +1631,21 @@ UC/10
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="34" parent="16" name="diagnosis_id_seq">
-      <ObjectId>16416</ObjectId>
+      <ObjectId>41428</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>916</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="35" parent="16" name="medical_history_id_seq">
       <ObjectId>16406</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="36" parent="16" name="patient_appointments_id_seq">
       <ObjectId>16460</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>908</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="37" parent="16" name="patient_status_id_seq">
@@ -1657,7 +1657,7 @@ UC/10
     <sequence id="38" parent="16" name="patients_id_seq">
       <ObjectId>16395</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="39" parent="16" name="roles_id_seq">
@@ -1669,7 +1669,7 @@ UC/10
     <sequence id="40" parent="16" name="staff_id_seq">
       <ObjectId>16427</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>699</StateNumber>
+      <StateNumber>907</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="41" parent="16" name="staff_types_id_seq">
@@ -1681,14 +1681,14 @@ UC/10
     <sequence id="42" parent="16" name="transfer_patient_id_seq">
       <ObjectId>16587</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <table id="43" parent="16" name="accounts">
       <ObjectId>16386</ObjectId>
       <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>699</StateNumber>
+      <StateNumber>907</StateNumber>
     </table>
     <table id="44" parent="16" name="appointment_status">
       <ObjectId>16560</ObjectId>
@@ -1702,8 +1702,9 @@ UC/10
     </table>
     <table id="46" parent="16" name="appointments">
       <ObjectId>16451</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>573</StateNumber>
+      <StateNumber>908</StateNumber>
     </table>
     <table id="47" parent="16" name="departments">
       <ObjectId>16576</ObjectId>
@@ -1711,22 +1712,22 @@ UC/10
       <StateNumber>617</StateNumber>
     </table>
     <table id="48" parent="16" name="diagnosis">
-      <ObjectId>16418</ObjectId>
+      <ObjectId>41430</ObjectId>
       <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>916</StateNumber>
     </table>
     <table id="49" parent="16" name="medical_history">
       <ObjectId>16408</ObjectId>
       <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
     </table>
     <table id="50" parent="16" name="patient_appointments">
       <ObjectId>16462</ObjectId>
       <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>908</StateNumber>
     </table>
     <table id="51" parent="16" name="patient_status">
       <ObjectId>16597</ObjectId>
@@ -1737,7 +1738,7 @@ UC/10
       <ObjectId>16397</ObjectId>
       <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
     </table>
     <table id="53" parent="16" name="roles">
       <ObjectId>16440</ObjectId>
@@ -1748,7 +1749,7 @@ UC/10
       <ObjectId>16429</ObjectId>
       <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>699</StateNumber>
+      <StateNumber>907</StateNumber>
     </table>
     <table id="55" parent="16" name="staff_types">
       <ObjectId>16542</ObjectId>
@@ -1757,9 +1758,8 @@ UC/10
     </table>
     <table id="56" parent="16" name="transfer_patient">
       <ObjectId>16589</ObjectId>
-      <Outdated>1</Outdated>
       <Owner>postgres</Owner>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
     </table>
     <column id="57" parent="43" name="id">
       <Position>1</Position>
@@ -1791,7 +1791,7 @@ UC/10
     </column>
     <index id="61" parent="43" name="accounts_pk">
       <ObjectId>16393</ObjectId>
-      <StateNumber>699</StateNumber>
+      <StateNumber>907</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1801,7 +1801,7 @@ UC/10
     </index>
     <index id="62" parent="43" name="accounts_login_uindex">
       <ObjectId>16611</ObjectId>
-      <StateNumber>699</StateNumber>
+      <StateNumber>907</StateNumber>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
@@ -1933,7 +1933,7 @@ UC/10
     </column>
     <index id="78" parent="46" name="appointments_pk">
       <ObjectId>16458</ObjectId>
-      <StateNumber>511</StateNumber>
+      <StateNumber>908</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -2003,49 +2003,58 @@ UC/10
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>502</StateNumber>
+      <StateNumber>916</StateNumber>
       <DefaultExpression>nextval(&apos;diagnosis_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="87" parent="48" name="definitive_diagnosis">
+    <column id="87" parent="48" name="preliminary_diagnosis">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>502</StateNumber>
+      <StateNumber>916</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="88" parent="48" name="date_of_receip">
+    <column id="88" parent="48" name="definitive_diagnosis">
       <Position>3</Position>
-      <DataType>date|0s</DataType>
-      <StateNumber>502</StateNumber>
-      <TypeId>1082</TypeId>
-    </column>
-    <column id="89" parent="48" name="date_of_issue">
-      <Position>4</Position>
-      <DataType>date|0s</DataType>
-      <StateNumber>502</StateNumber>
-      <TypeId>1082</TypeId>
-    </column>
-    <column id="90" parent="48" name="patient">
-      <Position>5</Position>
-      <DataType>integer|0s</DataType>
-      <StateNumber>502</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="91" parent="48" name="preliminary_diagnosis">
-      <Position>6</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>502</StateNumber>
+      <StateNumber>916</StateNumber>
       <TypeId>1043</TypeId>
+    </column>
+    <column id="89" parent="48" name="date_of_receip">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>916</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="90" parent="48" name="date_of_issue">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>916</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="91" parent="48" name="patient">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>916</StateNumber>
+      <TypeId>23</TypeId>
     </column>
     <column id="92" parent="48" name="history_id">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>502</StateNumber>
+      <StateNumber>916</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="93" parent="48" name="diagnosis_pk">
-      <ObjectId>16425</ObjectId>
-      <StateNumber>700</StateNumber>
+    <index id="93" parent="48" name="diagnosis_id_uindex">
+      <ObjectId>41447</ObjectId>
+      <StateNumber>917</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>1978</ClassIds>
+    </index>
+    <index id="94" parent="48" name="diagnosis_pk">
+      <ObjectId>41448</ObjectId>
+      <StateNumber>918</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -2053,16 +2062,16 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="94" parent="48" name="diagnosis_pk">
-      <ObjectId>16426</ObjectId>
-      <StateNumber>502</StateNumber>
+    <key id="95" parent="48" name="diagnosis_pk">
+      <ObjectId>41449</ObjectId>
+      <StateNumber>918</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>diagnosis_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="95" parent="48" name="diagnosis_patients_id_fk">
-      <ObjectId>16478</ObjectId>
-      <StateNumber>524</StateNumber>
+    <foreign-key id="96" parent="48" name="diagnosis_patients_id_fk">
+      <ObjectId>41437</ObjectId>
+      <StateNumber>916</StateNumber>
       <ColNames>patient</ColNames>
       <RefTableId>16397</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -2070,9 +2079,9 @@ UC/10
       <RefKeyName>patients_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="96" parent="48" name="diagnosis_medical_history_id_fk">
-      <ObjectId>16473</ObjectId>
-      <StateNumber>523</StateNumber>
+    <foreign-key id="97" parent="48" name="diagnosis_medical_history_id_fk">
+      <ObjectId>41442</ObjectId>
+      <StateNumber>916</StateNumber>
       <ColNames>history_id</ColNames>
       <RefTableId>16408</RefTableId>
       <RefColPositions>1</RefColPositions>
@@ -2080,7 +2089,7 @@ UC/10
       <RefKeyName>medical_history_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="97" parent="49" name="id">
+    <column id="98" parent="49" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2088,15 +2097,15 @@ UC/10
       <DefaultExpression>nextval(&apos;medical_history_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="98" parent="49" name="patient">
+    <column id="99" parent="49" name="patient">
       <Position>2</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>497</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="99" parent="49" name="medical_history_pk">
+    <index id="100" parent="49" name="medical_history_pk">
       <ObjectId>16412</ObjectId>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -2104,14 +2113,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="100" parent="49" name="medical_history_pk">
+    <key id="101" parent="49" name="medical_history_pk">
       <ObjectId>16413</ObjectId>
       <StateNumber>497</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>medical_history_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="101" parent="49" name="medical_history_patients_id_fk">
+    <foreign-key id="102" parent="49" name="medical_history_patients_id_fk">
       <ObjectId>16483</ObjectId>
       <StateNumber>527</StateNumber>
       <ColNames>patient</ColNames>
@@ -2121,7 +2130,7 @@ UC/10
       <RefKeyName>patients_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="102" parent="50" name="id">
+    <column id="103" parent="50" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2129,62 +2138,62 @@ UC/10
       <DefaultExpression>nextval(&apos;patient_appointments_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="103" parent="50" name="date_of_completion">
+    <column id="104" parent="50" name="date_of_completion">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>558</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="104" parent="50" name="date_of_appointment">
+    <column id="105" parent="50" name="date_of_appointment">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>561</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="105" parent="50" name="id_patient">
+    <column id="106" parent="50" name="id_patient">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>562</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="106" parent="50" name="id_appointment">
+    <column id="107" parent="50" name="id_appointment">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>563</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="107" parent="50" name="id_executor">
+    <column id="108" parent="50" name="id_executor">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>564</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="108" parent="50" name="status">
+    <column id="109" parent="50" name="status">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>565</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="109" parent="50" name="id_staff_appoint">
+    <column id="110" parent="50" name="id_staff_appoint">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>514</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="110" parent="50" name="id_diagnosis">
+    <column id="111" parent="50" name="id_diagnosis">
       <Position>9</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>517</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="111" parent="50" name="patient_appointments_pk">
+    <index id="112" parent="50" name="patient_appointments_pk">
       <ObjectId>16466</ObjectId>
-      <StateNumber>700</StateNumber>
+      <StateNumber>908</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -2192,14 +2201,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="112" parent="50" name="patient_appointments_pk">
+    <key id="113" parent="50" name="patient_appointments_pk">
       <ObjectId>16467</ObjectId>
       <StateNumber>514</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>patient_appointments_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="113" parent="50" name="patient_appointments_patients_id_fk">
+    <foreign-key id="114" parent="50" name="patient_appointments_patients_id_fk">
       <ObjectId>16634</ObjectId>
       <StateNumber>628</StateNumber>
       <ColNames>id_patient</ColNames>
@@ -2209,7 +2218,7 @@ UC/10
       <RefKeyName>patients_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="114" parent="50" name="patient_appointments_appointments_id_fk">
+    <foreign-key id="115" parent="50" name="patient_appointments_appointments_id_fk">
       <ObjectId>16629</ObjectId>
       <StateNumber>625</StateNumber>
       <ColNames>id_appointment</ColNames>
@@ -2221,7 +2230,7 @@ UC/10
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="115" parent="50" name="patient_appointments_staff_id_fk_2">
+    <foreign-key id="116" parent="50" name="patient_appointments_staff_id_fk_2">
       <ObjectId>16503</ObjectId>
       <StateNumber>541</StateNumber>
       <ColNames>id_executor</ColNames>
@@ -2231,7 +2240,7 @@ UC/10
       <RefKeyName>staff_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="116" parent="50" name="patient_appointments_appointment_status_id_fk">
+    <foreign-key id="117" parent="50" name="patient_appointments_appointment_status_id_fk">
       <ObjectId>16624</ObjectId>
       <StateNumber>621</StateNumber>
       <ColNames>status</ColNames>
@@ -2241,7 +2250,7 @@ UC/10
       <RefKeyName>appointment_status_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="117" parent="50" name="patient_appointments_staff_id_fk">
+    <foreign-key id="118" parent="50" name="patient_appointments_staff_id_fk">
       <ObjectId>16493</ObjectId>
       <StateNumber>535</StateNumber>
       <ColNames>id_staff_appoint</ColNames>
@@ -2251,17 +2260,17 @@ UC/10
       <RefKeyName>staff_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="118" parent="50" name="patient_appointments_diagnosis_id_fk">
-      <ObjectId>16498</ObjectId>
-      <StateNumber>538</StateNumber>
+    <foreign-key id="119" parent="50" name="patient_appointments_diagnosis_id_fk">
+      <ObjectId>41450</ObjectId>
+      <StateNumber>922</StateNumber>
       <ColNames>id_diagnosis</ColNames>
-      <RefTableId>16418</RefTableId>
+      <RefTableId>41430</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>diagnosis</RefTableName>
       <RefKeyName>diagnosis_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="119" parent="51" name="id">
+    <column id="120" parent="51" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2269,14 +2278,14 @@ UC/10
       <DefaultExpression>nextval(&apos;patient_status_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="120" parent="51" name="status">
+    <column id="121" parent="51" name="status">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>604</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="121" parent="51" name="patient_status_pk">
+    <index id="122" parent="51" name="patient_status_pk">
       <ObjectId>16604</ObjectId>
       <StateNumber>604</StateNumber>
       <ColNames>id</ColNames>
@@ -2286,14 +2295,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="122" parent="51" name="patient_status_pk">
+    <key id="123" parent="51" name="patient_status_pk">
       <ObjectId>16605</ObjectId>
       <StateNumber>604</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>patient_status_pk</UnderlyingIndexName>
     </key>
-    <column id="123" parent="52" name="id">
+    <column id="124" parent="52" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2301,57 +2310,57 @@ UC/10
       <DefaultExpression>nextval(&apos;patients_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="124" parent="52" name="firstname">
+    <column id="125" parent="52" name="firstname">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="125" parent="52" name="lastname">
+    <column id="126" parent="52" name="lastname">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="126" parent="52" name="age">
+    <column id="127" parent="52" name="age">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="127" parent="52" name="department_id">
+    <column id="128" parent="52" name="department_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="128" parent="52" name="attending_doctor">
+    <column id="129" parent="52" name="attending_doctor">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>494</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="129" parent="52" name="status">
+    <column id="130" parent="52" name="status">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="130" parent="52" name="account_id">
+    <column id="131" parent="52" name="account_id">
       <Position>8</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="131" parent="52" name="patient_pic">
+    <column id="132" parent="52" name="patient_pic">
       <Position>9</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>491</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="132" parent="52" name="patients_pk">
+    <index id="133" parent="52" name="patients_pk">
       <ObjectId>16404</ObjectId>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -2359,14 +2368,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="133" parent="52" name="patients_pk">
+    <key id="134" parent="52" name="patients_pk">
       <ObjectId>16405</ObjectId>
       <StateNumber>491</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>patients_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="134" parent="52" name="patients_departments_id_fk">
+    <foreign-key id="135" parent="52" name="patients_departments_id_fk">
       <ObjectId>16582</ObjectId>
       <StateNumber>598</StateNumber>
       <ColNames>department_id</ColNames>
@@ -2376,7 +2385,7 @@ UC/10
       <RefKeyName>departments_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="135" parent="52" name="patients_staff_id_fk">
+    <foreign-key id="136" parent="52" name="patients_staff_id_fk">
       <ObjectId>16513</ObjectId>
       <StateNumber>547</StateNumber>
       <ColNames>attending_doctor</ColNames>
@@ -2386,7 +2395,7 @@ UC/10
       <RefKeyName>staff_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="136" parent="52" name="patients_patient_status_id_fk">
+    <foreign-key id="137" parent="52" name="patients_patient_status_id_fk">
       <ObjectId>16606</ObjectId>
       <StateNumber>607</StateNumber>
       <ColNames>status</ColNames>
@@ -2396,7 +2405,7 @@ UC/10
       <RefKeyName>patient_status_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="137" parent="52" name="patients_accounts_id_fk">
+    <foreign-key id="138" parent="52" name="patients_accounts_id_fk">
       <ObjectId>16508</ObjectId>
       <StateNumber>544</StateNumber>
       <ColNames>account_id</ColNames>
@@ -2406,7 +2415,7 @@ UC/10
       <RefKeyName>accounts_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="138" parent="53" name="id">
+    <column id="139" parent="53" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2414,14 +2423,14 @@ UC/10
       <DefaultExpression>nextval(&apos;roles_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="139" parent="53" name="title">
+    <column id="140" parent="53" name="title">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>577</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="140" parent="53" name="roles_pk">
+    <index id="141" parent="53" name="roles_pk">
       <ObjectId>16447</ObjectId>
       <StateNumber>508</StateNumber>
       <ColNames>id</ColNames>
@@ -2431,14 +2440,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="141" parent="53" name="roles_pk">
+    <key id="142" parent="53" name="roles_pk">
       <ObjectId>16448</ObjectId>
       <StateNumber>508</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>roles_pk</UnderlyingIndexName>
     </key>
-    <column id="142" parent="54" name="id">
+    <column id="143" parent="54" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2446,45 +2455,45 @@ UC/10
       <DefaultExpression>nextval(&apos;staff_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="143" parent="54" name="firstname">
+    <column id="144" parent="54" name="firstname">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="144" parent="54" name="lastname">
+    <column id="145" parent="54" name="lastname">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="145" parent="54" name="staff_pic">
+    <column id="146" parent="54" name="staff_pic">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
       <StateNumber>505</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="146" parent="54" name="type_id">
+    <column id="147" parent="54" name="type_id">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>505</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="147" parent="54" name="department_id">
+    <column id="148" parent="54" name="department_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>505</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="148" parent="54" name="account">
+    <column id="149" parent="54" name="account">
       <Position>7</Position>
       <DataType>integer|0s</DataType>
       <StateNumber>505</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="149" parent="54" name="staff_pk">
+    <index id="150" parent="54" name="staff_pk">
       <ObjectId>16436</ObjectId>
-      <StateNumber>699</StateNumber>
+      <StateNumber>907</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -2492,14 +2501,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="150" parent="54" name="staff_pk">
+    <key id="151" parent="54" name="staff_pk">
       <ObjectId>16437</ObjectId>
       <StateNumber>505</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>staff_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="151" parent="54" name="staff_staff_types_id_fk">
+    <foreign-key id="152" parent="54" name="staff_staff_types_id_fk">
       <ObjectId>16552</ObjectId>
       <StateNumber>584</StateNumber>
       <ColNames>type_id</ColNames>
@@ -2509,7 +2518,7 @@ UC/10
       <RefKeyName>staff_types_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="152" parent="54" name="staff_accounts_id_fk">
+    <foreign-key id="153" parent="54" name="staff_accounts_id_fk">
       <ObjectId>16488</ObjectId>
       <StateNumber>530</StateNumber>
       <ColNames>account</ColNames>
@@ -2519,7 +2528,7 @@ UC/10
       <RefKeyName>accounts_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="153" parent="55" name="id">
+    <column id="154" parent="55" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2527,14 +2536,14 @@ UC/10
       <DefaultExpression>nextval(&apos;staff_types_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="154" parent="55" name="position">
+    <column id="155" parent="55" name="position">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>580</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="155" parent="55" name="staff_types_pk">
+    <index id="156" parent="55" name="staff_types_pk">
       <ObjectId>16549</ObjectId>
       <StateNumber>580</StateNumber>
       <ColNames>id</ColNames>
@@ -2544,7 +2553,7 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <index id="156" parent="55" name="staff_types_position_uindex">
+    <index id="157" parent="55" name="staff_types_position_uindex">
       <ObjectId>16551</ObjectId>
       <StateNumber>581</StateNumber>
       <ColNames>position</ColNames>
@@ -2554,14 +2563,14 @@ UC/10
       <CollationNames>default</CollationNames>
       <ClassIds>3126</ClassIds>
     </index>
-    <key id="157" parent="55" name="staff_types_pk">
+    <key id="158" parent="55" name="staff_types_pk">
       <ObjectId>16550</ObjectId>
       <StateNumber>580</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>staff_types_pk</UnderlyingIndexName>
     </key>
-    <column id="158" parent="56" name="id">
+    <column id="159" parent="56" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
@@ -2569,37 +2578,37 @@ UC/10
       <DefaultExpression>nextval(&apos;transfer_patient_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="159" parent="56" name="transfer_date">
+    <column id="160" parent="56" name="transfer_date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>601</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="160" parent="56" name="patient_id">
+    <column id="161" parent="56" name="patient_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>601</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="161" parent="56" name="department_from">
+    <column id="162" parent="56" name="department_from">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>601</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="162" parent="56" name="department_in">
+    <column id="163" parent="56" name="department_in">
       <Position>5</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>601</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="163" parent="56" name="transfer_patient_pk">
+    <index id="164" parent="56" name="transfer_patient_pk">
       <ObjectId>16593</ObjectId>
-      <StateNumber>700</StateNumber>
+      <StateNumber>907</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -2607,14 +2616,14 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="164" parent="56" name="transfer_patient_pk">
+    <key id="165" parent="56" name="transfer_patient_pk">
       <ObjectId>16594</ObjectId>
       <StateNumber>601</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>transfer_patient_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="165" parent="56" name="transfer_patient_patients_id_fk">
+    <foreign-key id="166" parent="56" name="transfer_patient_patients_id_fk">
       <ObjectId>16649</ObjectId>
       <StateNumber>633</StateNumber>
       <ColNames>patient_id</ColNames>
@@ -2624,7 +2633,7 @@ UC/10
       <RefKeyName>patients_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="166" parent="56" name="transfer_patient_departments_id_fk">
+    <foreign-key id="167" parent="56" name="transfer_patient_departments_id_fk">
       <ObjectId>16639</ObjectId>
       <StateNumber>631</StateNumber>
       <ColNames>department_from</ColNames>
@@ -2634,7 +2643,7 @@ UC/10
       <RefKeyName>departments_pk</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="167" parent="56" name="transfer_patient_departments_id_fk_2">
+    <foreign-key id="168" parent="56" name="transfer_patient_departments_id_fk_2">
       <ObjectId>16644</ObjectId>
       <StateNumber>632</StateNumber>
       <ColNames>department_in</ColNames>

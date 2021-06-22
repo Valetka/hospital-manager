@@ -34,7 +34,7 @@ public class AddAppointment implements Command {
     private static final String INFORMATION = "info";
     private static final String SELECTED_TYPE = "select_type";
     private static final String SELECTED_PATIENT = "select_patient_id";
-    private static final String SELECTED_EXEC_STAFF_ = "select_staff_id";
+    private static final String SELECTED_EXEC_STAFF = "select_staff_id";
 
 
     private static final String APPOINTMENT_ADDED_OK = "local.info.appointed_added";
@@ -60,14 +60,14 @@ public class AddAppointment implements Command {
         type = AppointmentType.getAppointmentTypeById(Integer.parseInt(request.getParameter(SELECTED_TYPE)));
         information = request.getParameter(INFORMATION);
         patientId = Long.valueOf(request.getParameter(SELECTED_PATIENT));
-        execStaffId = Long.valueOf(request.getParameter(SELECTED_EXEC_STAFF_));
+        execStaffId = Long.valueOf(request.getParameter(SELECTED_EXEC_STAFF));
         if(!request.getParameter(SELECTED_TYPE).equals("1"))
         {
             dateOfCompletion = Date.valueOf(request.getParameter(ATTRIBUTE_COMPLETION_DATE));
         }
 
         AppointmentService docService = ServiceProvider.getInstance().getAppointmentService();
-        AppointmentInfo appointmentInfo = null;
+        AppointmentInfo appointmentInfo;
         try {
             appointmentInfo = docService.getAppointmentInfo(information,type);
         } catch (ServiceException e) {

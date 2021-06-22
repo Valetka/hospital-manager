@@ -26,11 +26,13 @@ public class AddAccount implements Command {
     private static final String ERROR_DATA = "local.error.data_format";
 
     private static final String STAFF_TYPE = "staff_type";
+    private static final String STAFF_DEPARTMENT = "select_department";
 
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
         long staffType = 0;
+        int department = 0;
         String returnErrorPage;
 
         HttpSession session = request.getSession(true);
@@ -39,13 +41,20 @@ public class AddAccount implements Command {
         UserInfoBuilder userInfoBuilder = new UserInfoBuilder();
         userInfoBuilder.buildUserInfo(request);
 
-        if(isAuth != null )
+        if(isAuth != null && request.getParameter(STAFF_TYPE) != null)
         {
             returnErrorPage = GO_TO_ADD_STAFF_PAGE;
             staffType = Long.parseLong(request.getParameter(STAFF_TYPE));
+            department = Integer.parseInt(request.getParameter(STAFF_DEPARTMENT));
             userInfoBuilder.setRoleId(2);
-        } else {
-
+        }
+        else if (isAuth != null)
+        {
+            returnErrorPage = GO_TO_ADD_PATIENT_PAGE;
+            userInfoBuilder.setRoleId(3);
+        }
+        else
+            {
             returnErrorPage = GO_TO_REGISTRATION_PAGE;
             userInfoBuilder.setRoleId(3);
         }
@@ -59,9 +68,17 @@ public class AddAccount implements Command {
         try {
             accountService.registration(userInfo);
             Account account = accountService.authorization(userInfo.getLogin(),userInfo.getPassword());
-            if(account.getRoleId()==3)
-            {
-                Patient patient = ServiceProvider.getInstance().getPatientService().getPatientByAccount(account.getId());;
+            if (account.getRoleId()==3){
+                Patient patient = ServiceProvider.getInstance().getPatientService().getPatientByAccount(account.getId());
+                if (request.getParameter(AGE) != null){
+                    String firstname = request.getParameter(FIRSTNAME);
+                    String lastname = request.getParameter(LASTNAME);
+                    String age = request.getParameter(AGE);
+                    patient.setFirstname(firstname);
+                    patient.setLastname(lastname);
+                    patient.setAge(Integer.parseInt(age));
+                    patientService.update(patient);
+                }
                 patientService.savePictureToPatient(patient,null);
                 MedicalHistory medicalHistory = new MedicalHistory();
                 medicalHistory.setPatientId(patient.getId());
@@ -69,6 +86,7 @@ public class AddAccount implements Command {
             }else if(account.getRoleId()==2){
                 Staff staff = ServiceProvider.getInstance().getStaffService().getStaffByAccount(account.getId());
                 staff.setStaffTypeID(staffType);
+                staff.setDepartment(department);
                 staff.setFirstname(userInfo.getFirstname());
                 staff.setLastname(userInfo.getLastname());
                 staffService.update(staff);

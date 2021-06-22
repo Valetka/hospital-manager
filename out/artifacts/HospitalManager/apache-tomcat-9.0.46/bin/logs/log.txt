@@ -73,3 +73,86 @@
   Подробности: Key (account_id)=(0) is not present in table "accounts".
 2021-06-16 19:21:31 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
   Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-16 19:55:40 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-17 16:05:47 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-17 16:58:01 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-17 19:43:40 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-17 19:49:10 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-17 19:51:06 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-18 12:55:09 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-18 14:42:07 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-18 14:56:51 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-18 15:06:44 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-18 19:04:47 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-18 19:11:57 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_accounts_id_fk"
+  Подробности: Key (account_id)=(0) is not present in table "accounts".
+2021-06-18 19:32:29 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: ERROR: column "history_id" is of type integer but expression is of type character varying
+  Подсказка: You will need to rewrite or cast the expression.
+  Позиция: 137
+2021-06-18 19:59:43 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_staff_id_fk"
+  Подробности: Key (attending_doctor)=(0) is not present in table "staff".
+2021-06-18 20:09:40 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_staff_id_fk"
+  Подробности: Key (attending_doctor)=(0) is not present in table "staff".
+2021-06-18 20:11:17 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: column "attending_doctor" is of type integer but expression is of type character varying
+  Подсказка: You will need to rewrite or cast the expression.
+  Позиция: 101
+2021-06-18 20:16:34 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_staff_id_fk"
+  Подробности: Key (attending_doctor)=(0) is not present in table "staff".
+2021-06-19 01:06:57 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: column "attending_doctor" is of type integer but expression is of type character varying
+  Подсказка: You will need to rewrite or cast the expression.
+  Позиция: 101
+2021-06-19 01:08:36 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: column "attending_doctor" is of type integer but expression is of type character varying
+  Подсказка: You will need to rewrite or cast the expression.
+  Позиция: 101
+2021-06-19 01:10:30 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_staff_id_fk"
+  Подробности: Key (attending_doctor)=(0) is not present in table "staff".
+2021-06-19 01:16:28 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: insert or update on table "patients" violates foreign key constraint "patients_departments_id_fk"
+  Подробности: Key (department_id)=(2) is not present in table "departments".
+2021-06-19 01:34:48 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: Не указано значение для параметра 4.
+2021-06-19 19:47:30 FATAL AppContextListener - Error while initializing pool data
+2021-06-21 11:34:47 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-21 11:35:08 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-21 11:46:37 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-21 11:51:34 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: ERROR: column "history_id" is of type integer but expression is of type character varying
+  Подсказка: You will need to rewrite or cast the expression.
+  Позиция: 137
+2021-06-21 12:00:38 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-21 12:07:12 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-21 12:13:32 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-22 14:15:54 ERROR PatientDAOImplementation - org.postgresql.util.PSQLException: ERROR: operator does not exist: integer = character varying
+  Подсказка: No operator matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 47
+2021-06-22 14:43:35 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}
+2021-06-22 14:43:41 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}
+2021-06-22 14:50:21 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}
+2021-06-22 15:12:29 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}
+2021-06-22 15:17:44 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}
+2021-06-22 15:55:41 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}
+2021-06-22 16:53:46 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}
+2021-06-22 17:43:53 ERROR DiagnosisDAOImplementation - org.postgresql.util.PSQLException: Bad value for type timestamp/date/time: {1}

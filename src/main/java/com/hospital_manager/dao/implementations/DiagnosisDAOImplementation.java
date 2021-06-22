@@ -21,7 +21,7 @@ public class DiagnosisDAOImplementation implements DiagnosisDAO {
 
     private static final Logger logger = LogManager.getLogger(DiagnosisDAOImplementation.class);
 
-    private static final String INSERT_DIAGNOSIS = "insert into diagnosis(definitive_diagnosis,date_of_receip,date_of_issue,patient,preliminary_diagnosis,history_id) values(?,?,?,?,?,?)";
+    private static final String INSERT_DIAGNOSIS = "insert into diagnosis(preliminary_diagnosis, definitive_diagnosis,date_of_receip,date_of_issue,patient,history_id) values(?,?,?,?,?,?)";
     private static final String UPDATE_DIAGNOSIS = "update diagnosis set definitive_diagnosis = ?, date_of_issue = ?, history_id = ? where id = ?";
     private static final String SELECT_BY_PATIENT = "select * from diagnosis where patient = ?";
 
@@ -36,13 +36,13 @@ public class DiagnosisDAOImplementation implements DiagnosisDAO {
             connection = connectionPool.getConnection();
             preparedStatement = connection.prepareStatement(INSERT_DIAGNOSIS);
 
-            preparedStatement.setString(1,diagnosis.getDefinitiveDiagnosis());
-            preparedStatement.setDate(2,diagnosis.getReceiptDate());
-            preparedStatement.setDate(3,diagnosis.getDischargeDate());
-            preparedStatement.setLong(4,diagnosis.getPatientId());
-            preparedStatement.setString(5,diagnosis.getPreliminaryDiagnosis());
+            preparedStatement.setString(1,diagnosis.getPreliminaryDiagnosis());
+            preparedStatement.setString(2,diagnosis.getDefinitiveDiagnosis());
+            preparedStatement.setDate(3,diagnosis.getReceiptDate());
+            preparedStatement.setDate(4,diagnosis.getDischargeDate());
+            preparedStatement.setLong(5,diagnosis.getPatientId());
             if(diagnosis.getMedicalHistoryId()==0)
-            { preparedStatement.setString(6,null);}
+            { preparedStatement.setNull(6,0);}
             else
             { preparedStatement.setLong(6,diagnosis.getMedicalHistoryId());}
             preparedStatement.execute();
@@ -103,10 +103,10 @@ public class DiagnosisDAOImplementation implements DiagnosisDAO {
             preparedStatement = connection.prepareStatement(UPDATE_DIAGNOSIS);
             preparedStatement.setString(1,diagnosis.getDefinitiveDiagnosis());
             preparedStatement.setDate(2,diagnosis.getDischargeDate());
-            if(diagnosis.getMedicalHistoryId() == 0)
-                preparedStatement.setString(3,null);
+            if(diagnosis.getMedicalHistoryId()==0)
+            { preparedStatement.setNull(3,0);}
             else
-                preparedStatement.setLong(3,diagnosis.getMedicalHistoryId());
+            { preparedStatement.setLong(3,diagnosis.getMedicalHistoryId());}
             preparedStatement.setLong(4,diagnosis.getId());
             preparedStatement.execute();
         } catch (SQLException | ConnectionPoolException e) {
@@ -129,10 +129,11 @@ public class DiagnosisDAOImplementation implements DiagnosisDAO {
         Diagnosis diagnosis = new Diagnosis();
         diagnosis.setId(resultSet.getInt(1));
         diagnosis.setPreliminaryDiagnosis(resultSet.getString(2));
-        diagnosis.setDefinitiveDiagnosis(resultSet.getString(3));
+        diagnosis.setDefinitiveDiagnosis(resultSet.getString(2));
         diagnosis.setReceiptDate(resultSet.getDate(4));
         diagnosis.setDischargeDate(resultSet.getDate(5));
         diagnosis.setPatientId(resultSet.getLong(6));
+        diagnosis.setMedicalHistoryId(resultSet.getLong(7));
         return diagnosis;
 
     }

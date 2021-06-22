@@ -18,7 +18,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
 public class GoToDiagnosisPage implements Command {
 
     private static final String PATH_TO_DIAGNOSIS = "/WEB-INF/jsp/diagnosis.jsp";
-    private static final String GO_TO_DIAGNOSIS_PAGE = "Controller?command=gotodiagnosispage";
+    private static final String GO_TO_DIAGNOSIS_PAGE = "Controller?command=go_to_diagnosis_page";
     private static final String PATIENT_ID = "patient_id";
     private static final String DIAGNOSIS = "diagnosis";
 

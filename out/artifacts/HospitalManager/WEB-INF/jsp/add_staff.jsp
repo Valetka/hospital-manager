@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <meta charset="utf-8"><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -17,6 +17,10 @@
     <fmt:message bundle="${loc}" key="local.btn.add" var="add"/>
     <fmt:message bundle="${loc}" key="local.doctor" var="doctor"/>
     <fmt:message bundle="${loc}" key="local.staff" var="staff"/>
+    <fmt:message bundle="${loc}" key="local.department" var="department"/>
+    <fmt:message bundle="${loc}" key="local.surgery" var="surgery"/>
+    <fmt:message bundle="${loc}" key="local.therapeutic" var="therapeutic"/>
+    <fmt:message bundle="${loc}" key="local.gynecology" var="gynecology"/>
     <fmt:message bundle="${loc}" key="local.info_for_password" var="describ"/>
     <fmt:message bundle="${loc}" key="local.nurse" var="nurse"/>
     <fmt:message bundle="${loc}" key="local.page.registration" var="title"/>
@@ -30,8 +34,8 @@
     <form align = "center" action="Controller" method="post">
         <input type="hidden" name="command" value="add_account" />
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="firstname" id="floatingInput" required>
-            <label for="floatingInput">${first}</label>
+            <input type="text" class="form-control" name="firstname" id="firstname" required>
+            <label for="firstname">${first}</label>
         </div>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" name="lastname" id="lastname" required>
@@ -53,6 +57,20 @@
             <option value="1">${doctor} </option>
             <option value="2">${nurse} </option>
         </select><br/>
+        <label for="inputDep" class="form-label">${type}</label>
+        <select class="form-select" name = "select_department" id="inputDep" >
+            <c:forEach var="Dep" items="${requestScope.department}">
+                <c:if test="${Dep.toString().equals('SURGERY')}">
+                    <option value="${Dep.id}">${surgery}</option>
+                </c:if>
+                <c:if test="${Dep.toString().equals('THERAPEUTIC')}">
+                    <option value="${Dep.id}">${therapeutic}</option>
+                </c:if>
+                <c:if test="${Dep.toString().equals('GYNECOLOGY')}">
+                    <option value="${Dep.id}">${gynecology}</option>
+                </c:if>
+            </c:forEach>
+        </select>
          <button type="submit" class="btn btn-primary m-2">${add}</button>
     </form>
 

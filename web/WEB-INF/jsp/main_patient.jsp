@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/card.css">
     <meta charset="utf-8">
     <fmt:setLocale value="${sessionScope.locale}"/>
     <fmt:setBundle basename="local.local" var="loc"/>
@@ -24,23 +25,23 @@
     <fmt:message bundle="${loc}" key="local.page.patient" var="title"/>
     <title>${title}</title>
 </head>
-<body  class="bg-info">
-    <div class="d-flex flex-row flex-wrap justify-content-center">
+<body  class="bg-info d-flex flex-column h-100">
+    <div class="d-flex flex-row flex-wrap justify-content-center flex-grow-1">
         <c:if test="${sessionScope.role == 'patient'}">
-            <div class="card m-2" style="width: 18rem;">
-                <div class="card-body m-2">
+            <div class="card m-2" style="width: 18rem; height: 35%">
+                <div class="card-body m-2 d-flex flex-column align-items-center justify-content-between">
                     <h5 class="card-title">${my_appoint}</h5>
-                    <p class="card-text">${app}</p>
+                    <p class="card-text text-center">${app}</p>
                     <form action="Controller" method="post">
                         <input type="hidden" name="command" value="go_to_patient_appointment_list_page"/>
                         <button class="btn btn-info card-link">${my_appoint}</button>
                     </form>
                 </div>
             </div>
-            <div class="card m-2" style="width: 18rem;">
-                <div class="card-body m-2">
+            <div class="card m-2" style="width: 18rem; height: 35%">
+                <div class="card-body m-2 d-flex flex-column align-items-center justify-content-between">
                     <h5 class="card-title">${hist}</h5>
-                    <p class="card-text">${hist_card}</p>
+                    <p class="card-text text-center">${hist_card}</p>
                     <form action="Controller" method="post">
                         <input type="hidden" name="command" value="go_to_medical_history_page"/>
                         <button class="btn btn-info card-link">${hist}</button>
@@ -48,10 +49,10 @@
                 </div>
             </div>
             <c:if test="${sessionScope.patient.statusID==2}">
-                <div class="card m-2" style="width: 18rem;">
-                    <div class="card-body m-2">
+                <div class="card m-2" style="width: 18rem; height: 35%">
+                    <div class="card-body m-2 d-flex flex-column align-items-center justify-content-between">
                         <h5 class="card-title">${submit}</h5>
-                        <p class="card-text">${request}</p>
+                        <p class="card-text text-center">${request}</p>
                         <form action="Controller" method="post">
                             <input type="hidden" name="command" value="submit_application"/>
                             <button class="btn btn-info card-link">${submit}</button>
@@ -60,10 +61,10 @@
                 </div>
             </c:if>
             <c:if test="${sessionScope.patient.statusID==1 || sessionScope.patient.statusID ==3}">
-                <div class="card m-2" style="width: 18rem;">
-                    <div class="card-body m-2">
+                <div class="card m-2" style="width: 18rem;height: 35%">
+                    <div class="card-body m-2 d-flex flex-column align-items-center justify-content-between">
                         <h5 class="card-title">${submit}</h5>
-                        <p class="card-text">${request}</p>
+                        <p class="card-text text-center">${request}</p>
                         <button class="btn btn-success btn-lg">${application_submitted}</button>
                     </div>
                 </div>

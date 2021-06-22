@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;
+<%@ page contentType="text/html;
     charset=utf-8"
          pageEncoding="utf-8"%>
 
@@ -16,7 +16,7 @@
     <fmt:message bundle="${loc}" key="local.patient" var="patient"/>
     <fmt:message bundle="${loc}" key="local.appointed" var="appointed"/>
     <fmt:message bundle="${loc}" key="local.date_of_appointment" var="date_app"/>
-    <fmt:message bundle="${loc}" key="local.date_of_appointment" var="date_comp"/>
+    <fmt:message bundle="${loc}" key="local.date_of_completion" var="date_comp"/>
     <fmt:message bundle="${loc}" key="local.appointment" var="appointment"/>
     <fmt:message bundle="${loc}" key="local.type" var="type"/>
     <fmt:message bundle="${loc}" key="local.status" var="status"/>
@@ -83,7 +83,7 @@
                         </td>
                         <td>
                             <form action="Controller" method="post">
-                                <input type="hidden" name="command" value="updateappointmentstatus"/>
+                                <input type="hidden" name="command" value="update_appointment_status"/>
                                 <input type="hidden" name="status" value="done"/>
                                 <input type="hidden" name="appointment_id" value="${item.id}"/>
                                 <input type="submit" value="${execute}"/>
@@ -91,7 +91,7 @@
                         </td>
                         <td>
                             <form action="Controller" method="post">
-                                <input type="hidden" name="command" value="updateappointmentstatus"/>
+                                <input type="hidden" name="command" value="update_appointment_status"/>
                                 <input type="hidden" name="status" value="canceled"/>
                                 <input type="hidden" name="appointment_id" value="${item.id}"/>
                                 <input type="submit" value="${undo}"/>

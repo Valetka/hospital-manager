@@ -40,7 +40,7 @@ public class GoToAddAppointmentPage implements Command {
             return;
         }
         PatientService patientService = ServiceProvider.getInstance().getPatientService();
-        List<Patient> patients = new ArrayList<>();
+        List<Patient> patients;
         try {
             patients = patientService.getAll();
         } catch (ServiceException e) {

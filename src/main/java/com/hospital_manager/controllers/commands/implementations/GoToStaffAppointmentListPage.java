@@ -22,7 +22,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
  */
 public class GoToStaffAppointmentListPage implements Command {
 
-    private static final String GO_TO_APPOINTMENT_STAFF_LIST_PAGE = "Controller?command=gotostaffappointmentlistpage";
+    private static final String GO_TO_APPOINTMENT_STAFF_LIST_PAGE = "Controller?command=go_to_staff_appointment_list_page";
     public static final String PATH_TO_APPOINTMENT_LIST_PAGE ="/WEB-INF/jsp/appointment_list_for_staff.jsp";
     private static final String ATTRIBUTE_APPOINTMENT_LIST = "appointment_list";
     @Override

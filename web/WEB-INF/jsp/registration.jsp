@@ -47,7 +47,6 @@
 						<div id="passwordHelpBlock" class="form-text">
 							${describ}
 						</div>
-
 					</div>
 					<button type="submit" class="btn btn-primary">${registration}</button>
 				</form>

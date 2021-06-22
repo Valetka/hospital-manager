@@ -21,7 +21,7 @@ public class PatientDAOImplementation implements PatientDAO {
 
     private static final Logger logger = LogManager.getLogger(PatientDAOImplementation.class);
 
-    private static final String UPDATE_PATIENT ="UPDATE patients SET firstname= ?, lastname = ?, age = ?, " +
+    private static final String  UPDATE_PATIENT ="UPDATE patients SET firstname= ?, lastname = ?, age = ?, " +
             " department_id = ?, attending_doctor = ?, status =?, account_id = ?, patient_pic = ? WHERE id = ? ";
 
     private static final String SELECT_PATIENTS = "SELECT * FROM patients WHERE attending_doctor =?";
@@ -43,11 +43,11 @@ public class PatientDAOImplementation implements PatientDAO {
             preparedStatement.setString(1,patient.getFirstname());
             preparedStatement.setString(2,patient.getLastname());
             preparedStatement.setInt(3,patient.getAge());
-            preparedStatement.setLong(4,patient.getDepartment().getId());
+            preparedStatement.setLong(4, patient.getDepartment().getId());
             if(patient.getAttendingDoctorID()==0)
-            { preparedStatement.setString(5,null);}
-            else
-            { preparedStatement.setLong(5,patient.getAttendingDoctorID());}
+            { preparedStatement.setNull(5,0);}
+            else{
+            preparedStatement.setLong(5,patient.getAttendingDoctorID());}
             preparedStatement.setLong(6,patient.getStatusID());
             preparedStatement.setLong(7,patient.getAccountID());
             preparedStatement.setString(8,patient.getPatientPic());
@@ -108,7 +108,7 @@ public class PatientDAOImplementation implements PatientDAO {
         try {
             connection = connectionPool.getConnection();
             preparedStatement = connection.prepareStatement(SELECT_PATIENTS);
-            preparedStatement.setString(1, String.valueOf(attendingDoctorId));
+            preparedStatement.setLong(1, attendingDoctorId);
             ResultSet set = preparedStatement.executeQuery();
             while (set.next()) {
                 Patient patient = patientMapping(set);
@@ -229,11 +229,11 @@ public class PatientDAOImplementation implements PatientDAO {
         patient.setFirstname(resultSet.getString(2));
         patient.setLastname(resultSet.getString(3));
         patient.setAge(resultSet.getInt(4));
-        patient.setPatientPic(resultSet.getString(5));
-        patient.setDepartment(resultSet.getInt(6));
-        patient.setAttendingDoctorID(resultSet.getLong(7));
-        patient.setStatusID(resultSet.getInt(8));
-        patient.setAccountID(resultSet.getInt(9));
+        patient.setPatientPic(resultSet.getString(9));
+        patient.setDepartment(resultSet.getInt(5));
+        patient.setAttendingDoctorID(resultSet.getLong(6));
+        patient.setStatusID(resultSet.getLong(7));
+        patient.setAccountID(resultSet.getLong(8));
         return patient;
     }
 }

@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;
+<%@ page contentType="text/html;
     charset=utf-8"
          pageEncoding="utf-8"%>
 
@@ -27,8 +27,8 @@
             <form action="Controller" method="post" >
                 <input type="hidden" name="command" value="add_additional_info" />
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" name="firstname" id="floatingInput" required>
-                    <label for="floatingInput">${first}</label>
+                    <input type="text" class="form-control" name="firstname" id="firstname" required>
+                    <label for="firstname">${first}</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" name="lastname" id="lastname" required>

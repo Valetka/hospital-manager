@@ -20,7 +20,7 @@ public class UploadFileController extends HttpServlet {
 
     private static final long serialVersionUID = 8428742754L;
 
-    private static final String GO_TO_PROFILE_PAGE = "Controller?command=gotoprofilepage";
+    private static final String GO_TO_PROFILE_PAGE = "Controller?command=go_to_profile_page";
 
     public UploadFileController() {
         super();

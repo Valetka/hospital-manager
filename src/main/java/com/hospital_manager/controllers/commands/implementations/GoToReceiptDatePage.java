@@ -14,7 +14,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
 
 public class GoToReceiptDatePage implements Command {
 
-    private static final String GO_TO_RECEIPT_PAGE = "Controller?command=gotoreceiptdatepage";
+    private static final String GO_TO_RECEIPT_PAGE = "Controller?command=go_to_receipt_date_page";
     private static final String PATH_TO_RECEIPT = "/WEB-INF/jsp/receipt_date.jsp";
 
     @Override

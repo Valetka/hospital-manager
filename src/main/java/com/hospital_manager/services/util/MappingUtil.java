@@ -46,7 +46,7 @@ public final class MappingUtil {
     public static DiagnosisDTO matToDiagnosisDTO(Diagnosis diagnosis) throws UtilException {
         DiagnosisDTO diagnosisDTO = new DiagnosisDTO();
         List<AppointmentDTO> appointmentDTOInDiagnosis = new ArrayList<>();
-        Patient patient = null;
+        Patient patient;
         try {
             patient = DAOProvider.getInstance().getPatientDAO().getPatientById(diagnosis.getPatientId());
             List<Appointment> appointmentsInDiagnosis = DAOProvider.getInstance()

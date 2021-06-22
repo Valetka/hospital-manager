@@ -187,7 +187,7 @@ public class AccountDAOImplementation implements AccountDAO {
 
     }
 
-    private void insertPatient( int accountId,Connection connection) throws SQLException, ConnectionPoolException {
+    private void insertPatient(int accountId,Connection connection) throws SQLException, ConnectionPoolException {
         PreparedStatement preparedStatement = connection.prepareStatement(INSERT_PATIENT);
         preparedStatement.setInt(1,accountId);
         preparedStatement.execute();

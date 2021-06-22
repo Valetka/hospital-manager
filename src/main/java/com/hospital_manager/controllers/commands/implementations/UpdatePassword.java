@@ -22,7 +22,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.*;
 
 public class UpdatePassword  implements Command {
 
-    private static final String GO_TO_UPDATE_PASSWORD_PAGE = "Controller?command=gotopasswordupdatepage";
+    private static final String GO_TO_UPDATE_PASSWORD_PAGE = "Controller?command=go_to_password_update_page";
 
     private static final String OLD_PASSWORD = "old_password";
     private static final String NEW_PASSWORD = "new_password";

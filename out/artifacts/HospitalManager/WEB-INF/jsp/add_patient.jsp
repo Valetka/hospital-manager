@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
+<%@ page contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <meta charset="utf-8"><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -29,8 +29,8 @@
     <form align = "center" action="Controller" method="post">
         <input type="hidden" name="command" value="add_account" />
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" name="firstname" id="floatingInput" required>
-            <label for="floatingInput">${first}</label>
+            <input type="text" class="form-control" name="firstname" id="firstname" required>
+            <label for="firstname">${first}</label>
         </div>
         <div class="form-floating mb-3">
             <input type="text" class="form-control" name="lastname" id="lastname" required>

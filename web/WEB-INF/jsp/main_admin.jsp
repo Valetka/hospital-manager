@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/card.css">
     <meta charset="utf-8">
     <fmt:setLocale value="${sessionScope.locale}"/>
     <fmt:setBundle basename="local.local" var="loc"/>
@@ -22,37 +23,37 @@
     <fmt:message bundle="${loc}" key="local.page.administrator" var="title"/>
     <title>${title}</title>
 </head>
-<body  class="bg-info">
+<body  class="bg-info d-flex flex-column h-100">
 
-<h1 align="center">
-
-</h1>
 
         <c:if test="${sessionScope.role == 'admin'}">
-            <div class="d-flex flex-row flex-wrap">
-                <div class="card m-2" style="width: 18rem;">
-                    <div class="card-body m-2">
-                        <h5 class="card-title">${addst}</h5>
-                        <p class="card-text">${cardst}</p>
-                        <form action="Controller" method="post">
-                            <input type="hidden" name="command" value="go_to_add_staff_page"/>
-                            <button class="btn btn-info card-link">${addst}</button>
-                        </form>
+            <div class="d-flex justify-content-center flex-grow-1">
+                <div class="d-flex flex-row flex-wrap">
+                    <div class="card m-2" style="width: 18rem;">
+                        <div class="card-body m-2 d-flex flex-column align-items-center">
+                            <h5 class="card-title">${addst}</h5>
+                            <p class="card-text text-center">${cardst}</p>
+                            <form action="Controller" method="post">
+                                <input type="hidden" name="command" value="go_to_add_staff_page"/>
+                                <button class="btn btn-info card-link">${addst}</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row flex-wrap">
+                    <div class="card m-2" style="width: 18rem;">
+                        <div class="card-body m-2 d-flex flex-column align-items-center">
+                            <h5 class="card-title">${addpat}</h5>
+                            <p class="card-text text-center">${cardpat}</p>
+                            <form action="Controller" method="post">
+                                <input type="hidden" name="command" value="go_to_add_patient_page"/>
+                                <button class="btn btn-info card-link">${addpat}</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-row flex-wrap">
-                <div class="card m-2" style="width: 18rem;">
-                    <div class="card-body m-2">
-                        <h5 class="card-title">${addpat}</h5>
-                        <p class="card-text">${cardpat}</p>
-                        <form action="Controller" method="post">
-                            <input type="hidden" name="command" value="go_to_add_patient_page"/>
-                            <button class="btn btn-info card-link">${addpat}</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+
         </c:if>
 
                 <c:if test="${errorMessage != null}">

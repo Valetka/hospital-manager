@@ -21,21 +21,6 @@ public class AppointmentDTO {
     private AppointmentType type;
     private AppointmentStatus status;
 
-    public AppointmentDTO(long id, Date dateOfAppointment, Date dateOfCompletion, String patientFirstname, String patientLastname, String appointingDoctorFirstname, String appointingDoctorLastname, String executeStaffFirstname, String executeStaffLastname, String info, AppointmentType type, AppointmentStatus status) {
-        this.id = id;
-        this.dateOfAppointment = dateOfAppointment;
-        this.dateOfCompletion = dateOfCompletion;
-        this.patientFirstname = patientFirstname;
-        this.patientLastname = patientLastname;
-        this.appointingDoctorFirstname = appointingDoctorFirstname;
-        this.appointingDoctorLastname = appointingDoctorLastname;
-        this.executeStaffFirstname = executeStaffFirstname;
-        this.executeStaffLastname = executeStaffLastname;
-        this.info = info;
-        this.type = type;
-        this.status = status;
-    }
-
     public AppointmentDTO() {
     }
 

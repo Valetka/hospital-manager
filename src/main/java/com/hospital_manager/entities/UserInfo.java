@@ -11,14 +11,6 @@ public class UserInfo {
     private int age;
     private long roleId;
 
-    public UserInfo(String firstname, String lastname, String login, String password, int age, long roleId) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.login = login;
-        this.password = password;
-        this.age = age;
-        this.roleId = roleId;
-    }
 
     public UserInfo() {
     }
@@ -54,6 +46,14 @@ public class UserInfo {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public long getRoleId() {

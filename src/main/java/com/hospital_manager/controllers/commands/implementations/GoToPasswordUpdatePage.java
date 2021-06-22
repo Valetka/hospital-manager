@@ -16,7 +16,7 @@ import static com.hospital_manager.controllers.commands.CommandParameter.ATTRIBU
 public class GoToPasswordUpdatePage implements Command {
 
     private static final String PATH_TO_UPDATE_PASSWORD = "/WEB-INF/jsp/update_password.jsp";
-    private static final String GO_TO_UPDATE_PASSWORD_PAGE = "Controller?command=gotomainadminpage";
+    private static final String GO_TO_UPDATE_PASSWORD_PAGE = "Controller?command=go_to_main_admin_page";
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

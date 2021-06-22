@@ -8,12 +8,6 @@ public class AppointmentInfo {
     private String info;
     private AppointmentType type;
 
-    public AppointmentInfo(long id, String info, AppointmentType type) {
-        this.id = id;
-        this.info = info;
-        this.type = type;
-    }
-
     public AppointmentInfo() {
     }
 

@@ -15,18 +15,6 @@ public class DiagnosisDTO {
     private String patientLastname;
     private List<AppointmentDTO> appointmentList;
 
-    public DiagnosisDTO(long id, String definitiveDiagnosis, String preliminaryDiagnosis, Date receiptDate,
-                        Date dischargeDate, String patientFirstname, String patientLastname, List<AppointmentDTO> appointmentList) {
-        this.id = id;
-        this.definitiveDiagnosis = definitiveDiagnosis;
-        this.preliminaryDiagnosis = preliminaryDiagnosis;
-        this.receiptDate = receiptDate;
-        this.dischargeDate = dischargeDate;
-        this.patientFirstname = patientFirstname;
-        this.patientLastname = patientLastname;
-        this.appointmentList = appointmentList;
-    }
-
     public DiagnosisDTO() {
     }
 

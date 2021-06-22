@@ -21,7 +21,7 @@ public class GoToDoctorsPatientsPage implements Command {
 
 
     private static final String PATH_TO_PATIENTS = "/WEB-INF/jsp/patients.jsp";
-    private static final String GO_TO_DOCTORS_PATIENTS = "Controller?command=gotodoctorspatientspage";
+    private static final String GO_TO_DOCTORS_PATIENTS = "Controller?command=go_to_doctors_patients_page";
     private static final String ATTRIBUTE_PATIENT = "patientList";
 
     @Override

@@ -11,7 +11,7 @@ public final class CommandParameter {
     public static final String GO_TO_MAIN_PAGE = "Controller?command=go_to_main_page";
     public static final String GO_TO_ERROR_PAGE = "error.jsp";
     public static final String PATH_TO_APPOINTMENT ="/WEB-INF/jsp/appointment.jsp";
-    public static final String PATH_TO_APPOINTMENT_NEXT_PAGE ="/WEB-INF/jsp/appointment_next_page.jsp";
+    public static final String PATH_TO_APPOINTMENT_NEXT_PAGE ="/WEB-INF/jsp/appointment_nextpage.jsp";
     public static final String ATTRIBUTE_ERROR_MESSAGE = "errorMessage";
     public static final String ATTRIBUTE_INFO_MESSAGE = "informationMessage";
     public static final String LOGIN = "login";

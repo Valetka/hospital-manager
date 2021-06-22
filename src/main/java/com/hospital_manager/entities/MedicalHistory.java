@@ -7,11 +7,6 @@ public class MedicalHistory {
     private long patientId;
 
 
-    public MedicalHistory(long id, long patientId) {
-        this.id = id;
-        this.patientId = patientId;
-    }
-
     public MedicalHistory() {
     }
 

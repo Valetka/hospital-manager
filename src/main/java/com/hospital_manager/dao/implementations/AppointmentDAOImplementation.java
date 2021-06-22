@@ -118,9 +118,9 @@ public class AppointmentDAOImplementation implements AppointmentDAO {
                 Appointment appointment = appointmentMapping(resultSet);
                 appointmentsByPatient.add(appointment);
             }
-        } catch (SQLException | ConnectionPoolException throwables) {
-            logger.log(Level.ERROR,throwables);
-            throw new DAOException(throwables);
+        } catch (SQLException | ConnectionPoolException throwable) {
+            logger.log(Level.ERROR,throwable);
+            throw new DAOException(throwable);
         }finally {
             connectionPool.releaseConnection(connection);
             try {

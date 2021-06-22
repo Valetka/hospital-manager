@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html;
+<%@ page contentType="text/html;
     charset=utf-8"
          pageEncoding="utf-8"%>
 
@@ -16,7 +16,7 @@
     <fmt:message bundle="${loc}" key="local.fulfilled" var="fulfilled"/>
     <fmt:message bundle="${loc}" key="local.appointed" var="appointed"/>
     <fmt:message bundle="${loc}" key="local.date_of_appointment" var="date_app"/>
-    <fmt:message bundle="${loc}" key="local.date_of_appointment" var="date_comp"/>
+    <fmt:message bundle="${loc}" key="local.date_of_completion" var="date_comp"/>
     <fmt:message bundle="${loc}" key="local.appointment" var="appointment"/>
     <fmt:message bundle="${loc}" key="local.type" var="type"/>
     <fmt:message bundle="${loc}" key="local.status" var="status"/>
